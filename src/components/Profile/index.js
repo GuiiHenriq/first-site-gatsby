@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Avatar from "../Avatar"
+
 const Profile = () => { // USE STATIC QUERY - HOOK DO REACT
   const {
     site: { 
@@ -19,7 +21,8 @@ const Profile = () => { // USE STATIC QUERY - HOOK DO REACT
     `)
 
   return (
-    <div className="Profile-react">
+    <div className="Profile-wrapper">
+      <Avatar />
       <h1>{title}</h1>
       <h2>{position}</h2>
       <p>{description}</p>
